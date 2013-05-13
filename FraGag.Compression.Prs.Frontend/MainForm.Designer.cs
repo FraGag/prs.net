@@ -63,6 +63,7 @@
             this.compressRadioButton.TabStop = true;
             this.compressRadioButton.Text = "&Compress";
             this.compressRadioButton.UseVisualStyleBackColor = true;
+            this.compressRadioButton.CheckedChanged += new System.EventHandler(this.compressRadioButton_CheckedChanged);
             // 
             // decompressRadioButton
             // 
@@ -73,6 +74,7 @@
             this.decompressRadioButton.TabIndex = 1;
             this.decompressRadioButton.TabStop = true;
             this.decompressRadioButton.Text = "&Decompress";
+            this.decompressRadioButton.CheckedChanged += new System.EventHandler(this.decompressRadioButton_CheckedChanged);
             // 
             // sourceLabel
             // 

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2012, Francis Gagné
+﻿// Copyright (c) 2012, 2013, Francis Gagné
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -249,6 +249,8 @@ namespace FraGag.Compression.PrsFrontend
             this.fileDialog.DefaultExt = this.init.DefaultExt;
             this.fileDialog.FileName = this.fileNameTextBox.Text;
             this.fileDialog.Filter = this.init.Filter;
+
+            this.init = null;
         }
 
         /// <summary>

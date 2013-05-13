@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2012, Francis Gagné
+﻿// Copyright (c) 2012, 2013, Francis Gagné
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -51,6 +51,18 @@ namespace FraGag.Compression.PrsFrontend
                 string header = this.decompressRadioButton.Checked ? DecompressErrorMessageHeader : CompressErrorMessageHeader;
                 MessageBox.Show(this, header + Environment.NewLine + Environment.NewLine + ex.ToString(), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void compressRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.sourceFileSelector.Filter = "All Files (*.*)|*.*";
+            this.destinationFileSelector.Filter = "PRS Files (*.prs)|*.prs";
+        }
+
+        private void decompressRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            this.sourceFileSelector.Filter = "PRS Files (*.prs)|*.prs";
+            this.destinationFileSelector.Filter = "All Files (*.*)|*.*";
         }
 
         private void fileSelector_FileNameChanged(object sender, EventArgs e)
